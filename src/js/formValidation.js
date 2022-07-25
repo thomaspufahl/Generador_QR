@@ -14,11 +14,12 @@ cl('JS funcionando');
 // checkForm(nombre);
 // checkForm(nac);
 
-const qrCode = () => {
+const generarQr = () => {
     const dni = document.querySelector('#dni').value;
     const apellido = document.querySelector('#apellido').value;
     const nombre = document.querySelector('#nombre').value;
     const nac = document.querySelector('#nac').value;
     const qrValue = '00000000000@' + apellido + '@' + nombre + '@N@' + dni + '@N@' + nac + '@00-00-0000';
     cl(qrValue);
+    let qrValueJson = JSON.stringify(qrValue);
 }
