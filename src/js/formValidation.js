@@ -1,25 +1,19 @@
 const cl = console.log;
 cl('JS funcionando');
 
-//VALIDACION DE DATOS EN CADA CAMPO DE LOS INPUTS
 
-// function checkForm(nombreCampo) {
-//     nombreCampo.addEventListener('submit', (e) => {
-//         let valueForm = e.target.value;
-//         if (valueForm.length === 0) {cl('Rellena el campo ' + nombreCampo.name)} else {cl(nombreCampo.value)}
-//     })
-// }
-// checkForm(dni);
-// checkForm(apellido);
-// checkForm(nombre);
-// checkForm(nac);
+const contenedorQR = document.getElementById("contenedorQR");
+const formularioQR = document.getElementById("formularioQR");
 
-const generarQr = () => {
+const QR = new QRCode(contenedorQR); 
+
+formularioQR.addEventListener("submit", (e) => {
+    e.preventDefault();
     const dni = document.querySelector('#dni').value;
     const apellido = document.querySelector('#apellido').value;
     const nombre = document.querySelector('#nombre').value;
     const nac = document.querySelector('#nac').value;
     const qrValue = '00000000000@' + apellido + '@' + nombre + '@N@' + dni + '@N@' + nac + '@00-00-0000';
-    cl(qrValue);
-    let qrValueJson = JSON.stringify(qrValue);
-}
+    QR.makeCode(qrValue);
+});
+

@@ -62,6 +62,7 @@ article div:nth-of-type(2) {
     background-color: #374956;
     background-position: center;
     background-size: cover;
+    margin: auto;
 }
 
 @media (min-width: 400px) {
@@ -74,13 +75,4 @@ article div:nth-of-type(2) {
     .grid > div:nth-of-type(2) {
     display: block;
     }
-}
-
-#divImg {
-    text-align: center;
-}
-
-#imagenQr {
-    width: 300px;
-    height: 300px;
 }

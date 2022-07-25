@@ -10,24 +10,27 @@
 </head>
 
 <body>
+<!-- SCRIPTS -->
+<script defer src="src/js/qrcode.js"></script>
+<script defer src="src/js/formValidation.js"></script>
+
     <main class="container">
         <article class="grid">
             <div>
-                <form name="qrForm" action="" method="get">
+                <form action="" id="formularioQR">
                     <input type="text" name="dni" id="dni" placeholder="DNI" aria-label="DNI">
                     <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" aria-label="APELLIDO">
                     <input type="text" name="nombre" id="nombre" placeholder="NOMBRE" aria-label="NOMBRE">
                     <input type="text" name="nac" id="nac" placeholder="FECHA DE NACIMIENTO" aria-label="FECHA DE NACIMIENTO">
-                    <button type="submit" onclick="generarQr()">Generar QR</button>
+                    <button type="submit">Generar QR</button>
                 </form>
             </div>
-            <div id="divFondo">
-                <div id="divImg"><img src="img/favicon.png" id="imagenQr"></div>
+            <div class="contenedor">
+                <div id="contenedorQR"></div>
             </div>
         </article>
     </main>
-    <!-- SCRIPTS -->
-    <script type="text/javascript" src="src/js/formValidation.js"></script>
+
 </body>
 
 </html>
