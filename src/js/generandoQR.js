@@ -1,11 +1,11 @@
-const cl = console.log;
-cl('JS funcionando');
-
-
 const contenedorQR = document.getElementById("contenedorQR");
 const formularioQR = document.getElementById("formularioQR");
 
-const QR = new QRCode(contenedorQR); 
+const QR = new QRCode(contenedorQR, {
+    width: 256,
+    height: 256,
+    
+}); 
 
 formularioQR.addEventListener("submit", (e) => {
     e.preventDefault();
