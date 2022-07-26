@@ -4,7 +4,7 @@ const formularioQR = document.getElementById("formularioQR");
 const QR = new QRCode(contenedorQR, {
     width: 256,
     height: 256,
-    
+    correctLevel: QRCode.CorrectLevel.L
 }); 
 
 formularioQR.addEventListener("submit", (e) => {
