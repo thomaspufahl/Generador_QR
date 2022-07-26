@@ -77,17 +77,20 @@ article div:nth-of-type(2) {
     }
 }
 
+
 .input {
     text-transform: uppercase;
 }
 
 #seccionQR {
+    border:dashed 4px rgba(16, 193, 69, 0.5);
+    background: rgba(255, 255, 255, 0);
     text-align: center;
 }
 
 #textoPersona {
-    background-color:rgba(255, 114, 20, 0.5);
-    border: 1px rgba(255, 114, 20, 0.5);
+    color: #fff;
+    background-color:rgba(16, 193, 69, 0.5);
     border-radius: 2.5px;
     -webkit-border-radius: 2.5px;
     -moz-border-radius: 2.5px;
