@@ -37,7 +37,7 @@ formularioQR.addEventListener("submit", (e) => {
     const nombre = document.querySelector('#nombre').value;
     const nac = document.querySelector('#nac').value;
     //variable de formato
-    const qrValue = '00000000000@' + apellido + '@' + nombre + '@N@' + dni + '@N@' + nac + '@00/00/0000';
+    const qrValue = '00000000000@' + apellido + '@' + nombre + '@N@' + dni + '@N@' + nac + '@00-00-0000';
     //dibuja qr
     QR.makeCode(qrValue);
     //variable nombre de la persona del qr
