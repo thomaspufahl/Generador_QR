@@ -78,9 +78,9 @@ article div:nth-of-type(2) {
 }
 
 
-.input {
+/* .input {
     text-transform: uppercase;
-}
+} */
 
 #seccionQR {
     border:dashed 4px rgba(16, 193, 69, 0.5);
@@ -89,7 +89,7 @@ article div:nth-of-type(2) {
 }
 
 #textoPersona {
-    color: #fff;
+    color: #2f2f2f;
     background-color:rgba(16, 193, 69, 0.5);
     border-radius: 2.5px;
     -webkit-border-radius: 2.5px;

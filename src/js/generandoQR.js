@@ -1,19 +1,19 @@
-//// Variables que toman del DOM las secciones a utilizar
+// Variables que toman del DOM las secciones a utilizar
 // La variable contenedorQR seleciona donde se va a dibujar el QR
 const contenedorQR = document.getElementById("contenedorQR");
 // La variable formularioQR selecciona el formulario del cual se van a recoger los datos para almacenar en el QR
 const formularioQR = document.getElementById("formularioQR");
 
-//// La variable QR inicializa el uso de la libreria "qrcode.js"
+// La variable QR inicializa el uso de la libreria "qrcode.js"
 // El primer parametro de QRCode es la seccion donde se va a dibujar el QR
 // El segundo parametro refiere al formato del QR
 const QR = new QRCode(contenedorQR, {
-    width: 256,
-    height: 256,
+    width: 144,
+    height: 144,
     correctLevel: QRCode.CorrectLevel.L
 }); 
 
-//// Se toma la variable formularioQR y se le asigna una propiedad(funcion).
+// Se toma la variable formularioQR y se le asigna una propiedad(funcion).
 //La funcion asignada usa dos parametros, el primero espera un Evento(submit) para ejecutar un procedimiento(param2).
 
 // Este procedimiento hace que al momento del Evento "submit", generado por el boton "generarQR"(en doc html),
@@ -37,7 +37,7 @@ formularioQR.addEventListener("submit", (e) => {
     const nombre = document.querySelector('#nombre').value;
     const nac = document.querySelector('#nac').value;
     //variable de formato
-    const qrValue = '00000000000@' + apellido + '@' + nombre + '@N@' + dni + '@N@' + nac + '@00-00-0000';
+    const qrValue = '00000000000@' + apellido + '@' + nombre + '@N@' + dni + '@N@' + nac + '@00/00/0000';
     //dibuja qr
     QR.makeCode(qrValue);
     //variable nombre de la persona del qr
